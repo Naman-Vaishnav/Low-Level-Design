@@ -1,0 +1,14 @@
+1)Airlines offering discounts during some months (July-December). You can have one Fare module, which decides pricing options depending on the month number.
+https://stackoverflow.com/questions/370258/real-world-example-of-the-strategy-pattern#comment48045221_370270
+
+2)Payment Processing: In a payment processing system, different payment methods like credit cards, PayPal, or mobile wallets can be handled using the Strategy pattern. Each payment method can be represented by a separate strategy class, allowing users to select their preferred payment method at runtime. The payment context class can invoke the appropriate strategy to process the payment.
+
+3)Tax calculation
+
+4)Data Compression: In a data compression application, various compression algorithms like gzip, zip or Lempel-Ziv-Welch (LZW) can be implemented using the Strategy pattern. Each compression algorithm can be encapsulated in a strategy class, and the application can switch between different strategies based on the type of data being compressed or user preferences.
+
+
+5)File Format Converters: File format converters that convert files between different formats, such as PDF to Word, JPG to PNG, or MP4 to AVI, can utilize the Strategy pattern. Each conversion algorithm can be encapsulated within a separate strategy class, allowing the application to choose the appropriate strategy based on the source and target file formats.
+
+6)https://dotnettutorials.net/lesson/strategy-pattern-real-time-example/
+
