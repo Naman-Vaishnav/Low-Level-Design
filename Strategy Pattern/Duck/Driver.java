@@ -13,7 +13,7 @@ public class Driver {
         
         */
 
-        /*Using Subclasses */
+        /*Using  Subclasses */
         WildDuck wildDuck=new WildDuck();
         wildDuck.fly(); //I fly at Jet speed...
         wildDuck.quank();// Normal quank
