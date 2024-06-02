@@ -2,7 +2,7 @@ package TypesOfDuck;
 import Strategies.FlyStrategies.Interface.FlyStrategy;
 import Strategies.QuankStrategies.Interface.QuackStrategy;
 
-
+//context
 public class Duck {
 
     FlyStrategy flyStrategy;
