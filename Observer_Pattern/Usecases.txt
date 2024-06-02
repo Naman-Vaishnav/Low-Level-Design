@@ -1,0 +1,5 @@
+1)Weather Station
+
+2)E-commerce out of stock Notify me option 
+
+3)https://dotnettutorials.net/lesson/real-time-examples-of-observer-design-pattern-in-csharp/
