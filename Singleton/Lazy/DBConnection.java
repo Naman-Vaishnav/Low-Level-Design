@@ -2,7 +2,7 @@ package Singleton.Lazy;
 
 public class DBConnection {
 
-    private DBConnection(){};
+    private DBConnection(){System.out.println("In constructor");};
 
     private static DBConnection instance;
 

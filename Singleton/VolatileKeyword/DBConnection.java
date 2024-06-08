@@ -1,10 +1,11 @@
-package Singleton.DoubleLocking;
+package Singleton.VolatileKeyword;
 
 public class DBConnection {
 
     private DBConnection(){System.out.println("In constructor");};
 
-    private static DBConnection instance;
+    //https://www.youtube.com/watch?v=upfrQvOgC24&list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW&index=33
+    private volatile static DBConnection instance;
     
      public static DBConnection getInstance(){
         if(instance==null){
@@ -17,9 +18,6 @@ public class DBConnection {
         } 
         return instance;
     }
-
-    //Singleton Design Pattern using enum
-    //https://www.youtube.com/watch?v=YOi5i-93lgo&list=PLsyeobzWxl7rqhgfVySFnwhtS4QUT4805&index=5
 
    
 }
