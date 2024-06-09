@@ -6,6 +6,9 @@ import Singleton.Lazy.DBConnection;
 //import  Singleton.VolatileKeyword.DBConnection;
 //import Singleton.DoubleLocking.DBConnection;
 
+// All the methods for singleton pattern
+//https://www.youtube.com/watch?v=SqDbZOjW1uM
+
 public class Client {
  public static void main(String[] args) {
    
