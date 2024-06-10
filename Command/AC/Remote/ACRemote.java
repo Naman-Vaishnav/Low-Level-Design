@@ -1,23 +1,37 @@
 package Command.AC.Remote;
 
+import java.util.Stack;
+
 import Command.AC.Commands.CommandInterface;
 
 //invoker
 public class ACRemote {
-    CommandInterface turnOnCommand;
+
+    Stack <CommandInterface> commandHistroy=new Stack<>();
+
+    CommandInterface command;
    // CommandInterface turnOffCommand;
 
-    public ACRemote(CommandInterface turnOnCommand){
-        //this.turnOffCommand=turnOffCommand;
-        this.turnOnCommand=turnOnCommand;
+    public ACRemote(){
     }
 
-    public void pressedOnButton(){
-        this.turnOnCommand.execute();
+    public void setCommand(CommandInterface command){
+        this.command=command;
     }
 
-    public void pressedOffButton(){
-        this.turnOnCommand.unexecute();
+    public void executeCommand(){
+        this.command.execute();
+
+        commandHistroy.push(command);
+    }
+
+    //undo
+    public void undoCommand(){ 
+        //this.command.unexecute();
+
+        CommandInterface lastCommand=commandHistroy.pop();
+        lastCommand.undo();
+
     }
 
 }

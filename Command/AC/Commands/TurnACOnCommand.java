@@ -14,7 +14,7 @@ public class TurnACOnCommand implements CommandInterface {
         ac.turnOn();
     }
 
-    public void unexecute(){
+    public void undo(){
         ac.turnOff();
     }
 
