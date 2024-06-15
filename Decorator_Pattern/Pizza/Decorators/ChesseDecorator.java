@@ -1,6 +1,6 @@
-package Observer_Pattern.Decorator_Pattern.Pizza.Decorators;
+package Decorator_Pattern.Pizza.Decorators;
 
-import Observer_Pattern.Decorator_Pattern.Pizza.Component.Pizza;
+import Decorator_Pattern.Pizza.Component.Pizza;
 
 public class ChesseDecorator extends PizzaDecorator {
     Pizza pizza;
