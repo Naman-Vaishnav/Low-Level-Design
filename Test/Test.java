@@ -86,6 +86,25 @@ public class Test {
        System.out.println(q.peek());
        System.out.println(q.poll());
        System.out.println(q);
+
+       StringBuilder sb=new StringBuilder("abcd");
+       //sb.deleteCharAt(0);
+       sb.delete(0, 2);
+       sb.setCharAt(0,sb.charAt(1) );
+       //System.out.println(sb);
+
+       int[] ar=new int[3];
+       ar[0]=0;ar[1]=1;ar[2]=2;
+     // List<Integer> l1=(Arrays.asList(ar));
+      // Collections.reverse(Arrays.asList(ar));
+       //for(int x:l1)System.out.println(ar.length);
+
+       String s1="a";
+       StringBuilder sb1=new StringBuilder();
+       sb1.append(s1);
+       
+       System.out.println(s1+'b');
+       System.out.println(s1);
        
 
     }
