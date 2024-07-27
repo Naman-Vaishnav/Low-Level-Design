@@ -13,7 +13,7 @@ public class ParkingSpot {
         this.type=type;
     }
 
-    Boolean isAvailable(){
+    synchronized Boolean isAvailable(){
         return parkedVehicle==null;
     }
 
@@ -25,7 +25,7 @@ public class ParkingSpot {
         return spotNumber;
     }
 
-    Boolean park(Vehicle vehicle){
+    synchronized Boolean park(Vehicle vehicle){
         if(isAvailable()){
             parkedVehicle=vehicle;
             return true;
@@ -33,7 +33,7 @@ public class ParkingSpot {
         return false;
     }
 
-    void unpark(Vehicle vehicle){
+    synchronized void unpark(Vehicle vehicle){
         parkedVehicle=null;
     }
 
