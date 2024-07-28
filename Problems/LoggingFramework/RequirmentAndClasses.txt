@@ -1,0 +1,45 @@
+1)Should be able to log at multiple Places like log file, Database, Console
+
+2)Should log multiple Categories of messages like INFO, ERROR, DEBUG..
+
+3)Place and Category should be configurable
+
+
+
+
+Logger                          //Singleton class
+    chainOfLogger:AbstractLogger
+
+    -logMessage()
+    
+
+For the chain of responsibility of categories
+
+AbstractLogger
+    level:LogLevels
+    nextLogger:AbstractLogger
+
+    -setNextLogger()
+    -log(level,message)
+    -display(message)       //abstract
+
+Concrete classes of AbstractLogger
+InfoLogger
+    -display()
+ErrorLogger
+    -display()
+DebugLogger
+    -display()
+
+enum LogLevels
+    INFO
+    ERROR
+    DEBUG
+
+LogManager
+    
+    -buildChainOfLoggers():AbstractLogger  //sets log configuration 
+
+
+
+Reference: https://www.youtube.com/watch?v=RljSBrZeJ3w

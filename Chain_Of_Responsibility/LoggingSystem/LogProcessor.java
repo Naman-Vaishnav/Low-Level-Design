@@ -8,6 +8,8 @@ public class LogProcessor {
 
      protected LogProcessor nexLogProcessor;
 
+     
+
      protected LogProcessor(LogProcessor nextLogProcessor){
         this.nexLogProcessor=nextLogProcessor;
     }
