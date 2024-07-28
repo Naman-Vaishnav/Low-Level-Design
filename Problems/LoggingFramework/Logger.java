@@ -22,6 +22,7 @@ public class Logger implements Cloneable,Serializable {
         logObservable=LogManager.buildLogObservable();
     }
     
+    //bill pugh
     private static class SingletonLogger{
         static final private Logger INSTANCE=new Logger();
     }

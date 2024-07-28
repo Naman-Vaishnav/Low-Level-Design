@@ -9,8 +9,9 @@
 
 Logger                          //Singleton class
     chainOfLogger:AbstractLogger
+    logObservable:LogObservable
 
-    -logMessage()
+    -logMessage(level,message)
     
 
 For the chain of responsibility of categories
@@ -21,7 +22,7 @@ AbstractLogger
 
     -setNextLogger()
     -log(level,message)
-    -display(message)       //abstract
+    -display(message,logObservable)       //abstract
 
 Concrete classes of AbstractLogger
 InfoLogger
@@ -39,6 +40,28 @@ enum LogLevels
 LogManager
     
     -buildChainOfLoggers():AbstractLogger  //sets log configuration 
+
+
+Observer Pattern for Places
+
+LogObservable interface
+    -add(level,LogObserver)
+    -update(level,message)
+
+LogObservableImpl
+    logObservers :HashMao<level,LogObserver>
+
+    -add(level,LogObserver)
+    -update(level,message)
+
+LogObserver interface
+    -update(message)
+
+FileObserver IS-A LogObserver
+    -update(message)
+
+ConsoleObserver IS-A LogObserver
+    -update(message)
 
 
 
