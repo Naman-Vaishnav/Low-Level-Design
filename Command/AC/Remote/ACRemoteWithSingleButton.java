@@ -32,6 +32,7 @@ public class ACRemoteWithSingleButton {
             System.out.println("No command to undo");
             return;
         }
+        //commandHistroy.peek()
         CommandInterface lastCommand=commandHistroy.pop();
         lastCommand.undo();
 
