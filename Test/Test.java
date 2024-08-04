@@ -77,18 +77,20 @@ public class Test {
         TreeSet<Integer> ts=new TreeSet<>(comp2);
         ts.add(2);
         ts.add(1);
+        ts.last();
        // System.out.println(ts);
 
        Queue<Integer> q=new LinkedList<>();
        q.add(2);
        q.add(1);
-       System.out.println(q);
-       System.out.println(q.peek());
-       System.out.println(q.poll());
-       System.out.println(q);
+       //System.out.println(q);
+       //System.out.println(q.peek());
+      // System.out.println(q.poll());
+       //System.out.println(q);
 
        StringBuilder sb=new StringBuilder("abcd");
-       //sb.deleteCharAt(0);
+       sb.append("ABC");
+       sb.deleteCharAt(0);
        sb.delete(0, 2);
        sb.setCharAt(0,sb.charAt(1) );
        //System.out.println(sb);
@@ -103,8 +105,39 @@ public class Test {
        StringBuilder sb1=new StringBuilder();
        sb1.append(s1);
        
-       System.out.println(s1+'b');
-       System.out.println(s1);
+       //System.out.println(s1+'b');
+       //System.out.println(s1);
+
+       TreeSet<Integer> ts1=new TreeSet<>();
+       ts1.add(2);
+       ts1.add(1);
+       ts1.add(4);
+       ts1.add(5);
+       /*
+       System.out.println(ts1.higher(4)); //5 >4
+       System.out.println(ts1.lower(4)); //2  <4
+       System.out.println(ts1.ceiling(4));//4 >=4
+       System.out.println(ts1.floor(4)); //4  <=4
+       System.out.println(ts1.ceiling(3));//4 >=4
+       System.out.println(ts1.floor(3)); //2  <=4
+        */
+
+       TreeMap<Integer,String> tm1=new TreeMap<>();
+       tm1.put(1, "one");
+       tm1.put(2, "two");
+       tm1.put(5, "five");
+       tm1.put(4, "four");
+       tm1.firstKey();
+       tm1.lastKey();
+       System.out.println(tm1.higherKey(4));//5
+       System.out.println(tm1.lowerKey(4));//2
+       System.out.println(tm1.ceilingKey(4));//4
+       System.out.println(tm1.floorKey(4));//4
+       System.out.println(tm1.ceilingKey(3));//4
+       System.out.println(tm1.floorKey(3));//2
+       System.out.println(tm1.higherKey(5)); //null
+
+
        
 
     }
