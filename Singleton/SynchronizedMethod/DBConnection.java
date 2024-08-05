@@ -22,8 +22,10 @@ public class DBConnection {
 There are a few reasons why synchronized can be slow in Java:
 Lock contention:
 When multiple threads are trying to acquire the same lock at the same time, they must contend for the lock. This can lead to long wait times for threads, and can significantly reduce the performance of the application.
+
 Context switching:
 When a thread is blocked waiting for a lock, the JVM must switch to another thread. This can be a costly operation, and can further reduce the performance of the application.
+
 Unnecessary synchronization:
 If you synchronize code that does not need to be synchronized, this can introduce unnecessary overhead. For example, if you synchronize a method that only reads data, this can prevent other threads from reading the data even though it is not being modified.
 
@@ -31,10 +33,13 @@ Here are some tips for using synchronization effectively and avoiding performanc
 
 Only synchronize code that needs to be synchronized.
 Avoid synchronizing code that does not need to be synchronized, such as code that only reads data.
+
 Use fine-grained synchronization.
 Instead of synchronizing entire methods, synchronize only the specific blocks of code that need to be synchronized. This can help to reduce lock contention and improve performance.
+
 Use lock hierarchies.
 If you have multiple locks, organize them into a hierarchy. This can help to reduce lock contention and improve performance.
+
 Use alternative concurrency mechanisms.
 In some cases, you may be able to use alternative concurrency mechanisms, such as concurrent collections or lock-free data structures, to avoid the overhead of synchronization.
      */

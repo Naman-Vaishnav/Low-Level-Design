@@ -6,7 +6,7 @@ public class InvoiceDao {
         System.out.println("Saving to DB:(");
     }   
 
-    //we want to new functionality
+    //we want to add new functionality
     public void saveToFile(){
         System.out.println("Saving to file");
     }
