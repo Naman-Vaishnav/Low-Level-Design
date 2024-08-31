@@ -1,5 +1,5 @@
 1)System should allow users to view the list of movies playing in different theaters
-2)User should be able to select theater,moview and show timing to book
+2)User should be able to select theater,movie and show timing to book
 3)select Seating arrangement
 4)Different type for seat and pricing
 5)Make payment and confirm booking

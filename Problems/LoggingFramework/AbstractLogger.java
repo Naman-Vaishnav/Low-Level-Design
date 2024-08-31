@@ -11,7 +11,7 @@ public abstract class AbstractLogger {
     }
 
      void log(LogLevel level,String message,LogObservable logObservable){
-        if(this.level.ordinal()==level.ordinal()){
+        if(this.level.ordinal()==level.ordinal()){ //<= if you need all lower logger 
             display(message,logObservable);
         }
         if(nextLogger!=null){

@@ -2,19 +2,21 @@ package Test;
 
 import java.util.*;
 
-public class Test {
+ class Test1 {
 
     
     public static void main(String[] args) {
 
-        /* 
+       
         HashMap<String,List<String>> hashMap=new HashMap<>();
         List<String> l1=new ArrayList<>();
         l1.add("1");
         hashMap.put("123",Arrays.asList("aa","bb"));
         hashMap.put("456",Arrays.asList("cc","dd"));
         hashMap.put("xyz",l1);
-
+        hashMap.containsKey("1");
+       
+ /* 
         for(String key:hashMap.keySet()){
             System.out.println(key);
             List<String> curList=hashMap.get(key);
@@ -45,24 +47,27 @@ public class Test {
         hm.put(1, "two");
         //System.out.println(hm.get(1));
         hm.remove(1);
+        
         //System.out.println(hm.get(1));
         
         Comparator<Integer> comp1=(i,j)-> i<j?1:-1;
         TreeMap<Integer,String> tm=new TreeMap<>(comp1);
         tm.put(2, "two");
         tm.put(1, "one");
+        tm.containsKey(1);
         //System.out.println(tm);
 
-        List<Integer> l1=new ArrayList<>();
-        l1.add(11);
-        l1.add(1);
-        l1.add(9);
+        List<Integer> l11=new ArrayList<>();
+        l11.add(11);
+        l11.add(1);
+        l11.add(9);
         Comparator<Integer> comp=(i,j)-> i<j?1:-1;
-        Collections.sort(l1,comp);
+        Collections.sort(l11,comp);
+        
         //System.out.println(l1);
 
         Comparator<Integer> comp2=(i,j)->i<j?1:-1;
-        PriorityQueue<Integer> pq=new PriorityQueue<>(comp2);
+        PriorityQueue<Integer> pq=new PriorityQueue<>(comp2); //max 
         pq.add(11);
         pq.add(1);
         pq.add(9);
@@ -72,27 +77,45 @@ public class Test {
         hs.add(1);
         hs.add(2);
         hs.remove(1);
+        hs.contains(2);
        // System.out.println(hs.contains(2));
 
         TreeSet<Integer> ts=new TreeSet<>(comp2);
         ts.add(2);
         ts.add(1);
         ts.last();
+        ts.first();
+        ts.remove(1);
        // System.out.println(ts);
 
        Queue<Integer> q=new LinkedList<>();
        q.add(2);
        q.add(1);
+       q.poll();
+       q.peek();
        //System.out.println(q);
        //System.out.println(q.peek());
       // System.out.println(q.poll());
        //System.out.println(q);
 
+       LinkedList<Integer> ll=new LinkedList<>();
+       ll.getLast();
+       ll.getFirst();
+       ll.addFirst(1);
+       ll.addLast(1);
+       ll.removeFirst();
+       ll.removeLast();
+
        StringBuilder sb=new StringBuilder("abcd");
+       //sb.equals(sb);
+       sb.substring(0, 1);
        sb.append("ABC");
        sb.deleteCharAt(0);
        sb.delete(0, 2);
        sb.setCharAt(0,sb.charAt(1) );
+       sb.charAt(0);
+       //sb.insert(0, 0)
+       //sb.
        //System.out.println(sb);
 
        int[] ar=new int[3];
@@ -129,14 +152,18 @@ public class Test {
        tm1.put(4, "four");
        tm1.firstKey();
        tm1.lastKey();
-       System.out.println(tm1.higherKey(4));//5
+      /*  System.out.println(tm1.higherKey(4));//5
        System.out.println(tm1.lowerKey(4));//2
        System.out.println(tm1.ceilingKey(4));//4
        System.out.println(tm1.floorKey(4));//4
        System.out.println(tm1.ceilingKey(3));//4
        System.out.println(tm1.floorKey(3));//2
        System.out.println(tm1.higherKey(5)); //null
+*/
+Date d=new Date();
+//System.out.println(d.getTime());
 
+ArrayDeque<Integer> dq=new ArrayDeque<>();
 
        
 

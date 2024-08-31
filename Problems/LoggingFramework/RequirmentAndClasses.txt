@@ -21,16 +21,16 @@ AbstractLogger
     nextLogger:AbstractLogger
 
     -setNextLogger()
-    -log(level,message)
-    -display(message,logObservable)       //abstract
+    -log(level,message,LogObservable)
+    -display(message,logObservable,LogObservable)       //abstract
 
 Concrete classes of AbstractLogger
 InfoLogger
-    -display()
+    -display(message,LogObservable) //call LogObservable.update(level,message)
 ErrorLogger
-    -display()
+    -display(message,LogObservable)
 DebugLogger
-    -display()
+    -display(message,LogObservable)
 
 enum LogLevels
     INFO
@@ -46,22 +46,22 @@ Observer Pattern for Places
 
 LogObservable interface
     -add(level,LogObserver)
-    -update(level,message)
+    -update(level,message) //notify
 
 LogObservableImpl
-    logObservers :HashMao<level,LogObserver>
+    logObservers :HashMap<level,LogObserver>
 
     -add(level,LogObserver)
-    -update(level,message)
+    -update(level,message) //notify
 
 LogObserver interface
     -update(message)
 
 FileObserver IS-A LogObserver
-    -update(message)
+    -update(message) //put message in File
 
 ConsoleObserver IS-A LogObserver
-    -update(message)
+    -update(message) //put message in Console
 
 
 
