@@ -2,6 +2,7 @@ package Test;
 
 import java.util.*;
 
+
  class Test1 {
 
     
@@ -99,6 +100,7 @@ import java.util.*;
        //System.out.println(q);
 
        LinkedList<Integer> ll=new LinkedList<>();
+       ll.addFirst(1);
        ll.getLast();
        ll.getFirst();
        ll.addFirst(1);
@@ -164,6 +166,40 @@ Date d=new Date();
 //System.out.println(d.getTime());
 
 ArrayDeque<Integer> dq=new ArrayDeque<>();
+
+
+    HashMap<List<Integer>, Integer> map = new HashMap<>();
+
+    // Create lists to use as keys
+    List<Integer> key1 = new ArrayList<>();
+    key1.add(1);
+    key1.add(2);
+    List<Integer> key2 = new ArrayList<>();
+    key2.add(3);
+    key2.add(4);
+
+    List<Integer> key3 = new ArrayList<>();
+    key3.add(3);
+    key3.add(4);
+
+    // Put entries into the map
+    map.put(key1, 100);
+    map.put(key2, 200);
+
+    if (map.containsKey(key3)) {
+        System.out.println(map.get(key3));
+    }
+    enum e1{
+        A
+    }
+    Map<e1, Integer>[] mp =new Hash;
+    for(int i=0;i<2;i++){
+        mp
+    }
+
+        
+        
+
 
        
 

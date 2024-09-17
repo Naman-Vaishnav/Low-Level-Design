@@ -1,0 +1,39 @@
+1)Game should be played on N*N board
+2)Should support multiple players having different symboles 
+3)Game should end in case of draw or win
+
+
+
+Classes
+
+PlayingPiece enum
+
+
+Player
+    -name
+    -PlayingPiece
+
+
+
+Board
+    -PlayingPiece[][] board
+    -size
+    -noOfPlayers
+    -rowCount[rowNumber][PlayingPiece enum number]
+    -colCount[colNumber][PlayingPiece enum number]
+    -diagCount[PlayingPiece enum number]
+    -revDiagCount[PlayingPiece enum number]
+
+    setPiece() //return the game status after setting
+    validateInput()
+    checkWinner()
+    printBoard()
+
+
+Game
+    -Board
+    -Deque<Players>
+
+    startGame()
+
+
