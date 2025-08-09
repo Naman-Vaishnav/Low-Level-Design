@@ -26,7 +26,7 @@ abstract public class PaymentFlow {
     }
 
 
-    //hooks
+    //hooks(Optional methods)
     public void beforeValidate(){
        //empty body
     }
